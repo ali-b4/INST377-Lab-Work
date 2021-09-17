@@ -9,14 +9,14 @@
     background-color: #5995DA;
     padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   .menu {
     border: 1px solid #fff;
     width: 900px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .links {
