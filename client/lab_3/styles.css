@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  top-bar {
+  .top-bar {
     background-color: rgba(3, 112, 112, 0.4);
     display: flex;
     flex-flow: row wrap;
