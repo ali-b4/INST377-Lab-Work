@@ -29,6 +29,10 @@
     margin-left: 20px;
   }
 
+  .database-demos {
+    margin-left: auto;
+  }
+
   .header-container {
     color: #5995DA;
     background-color: #D6E9FE;
@@ -78,7 +82,7 @@
   .last-item {
     order: -1;
   }
-  
+
   .footer {
     display: flex;
     justify-content: space-between;
@@ -90,3 +94,10 @@
     height: 200px;
     flex: 1;
   }
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
