@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   top-bar {
-    background-color: rgba(0,139, 139,0.4);
+    background-color: rgba(3, 112, 112, 0.4);
     display: flex;
     flex-flow: row wrap;
     border-radius: 4px;
@@ -12,7 +12,7 @@
     padding: 10px;
     margin-bottom: 15px;
   }
-  
+
   .menu-container {
     color: #fff;
     background-color: #5995DA;
