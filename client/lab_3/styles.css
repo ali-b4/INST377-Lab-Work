@@ -5,6 +5,9 @@
   }
   .top-bar {
     background-color: rgba(3, 112, 112, 0.4);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
   }
 
   .menu-container {
