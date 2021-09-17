@@ -25,6 +25,20 @@
     justify-content: flex-end;
   }
   
-  .login {
+  .main-page {
     margin-left: 20px;
+  }
+  
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
   }
