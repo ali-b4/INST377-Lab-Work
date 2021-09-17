@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
   }
+  top-bar {
+    background-color: rgba(0,139, 139,0.4);
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 4px;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
   
   .menu-container {
     color: #fff;
@@ -46,7 +55,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap
   }
 
   .logo {
