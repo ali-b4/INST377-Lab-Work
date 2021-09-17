@@ -47,7 +47,8 @@
   .social,
   .logo,
   .subscribe {
-    border: 1px solid #5995DA;
+    align-self: flex-end;
+    margin-bottom: 20px;
   }
 
   .photo-grid-container {
