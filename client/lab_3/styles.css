@@ -50,10 +50,11 @@
 
   .logo {
     align-self: center;
-    order: 0;
+    order: 1;
   }
 
-  .social {
+  .group,
+  .github {
     align-self: flex-end;
     margin-bottom: 20px;
     justify-content: space-between;
