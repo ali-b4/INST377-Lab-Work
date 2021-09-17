@@ -48,6 +48,10 @@
     align-items: center;
   }
 
+  .logo {
+    align-self: flex-start;
+  }
+
   .social {
     align-self: flex-end;
     margin-bottom: 20px;
