@@ -48,11 +48,14 @@
     align-items: center;
   }
 
-  .social,
-  .logo,
-  .subscribe {
+  .logo {
+    align-items: flex-start;
+  }
+  
+  .social {
     align-self: flex-end;
     margin-bottom: 20px;
+    justify-content: space-between;
   }
 
   .photo-grid-container {
