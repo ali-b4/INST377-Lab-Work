@@ -5,7 +5,7 @@
 }
 
 .sky {
-    background-color: lightblue;
+    background-color: rgb(44, 186, 233);
     width: 500px
     height: 580px;
     position: absolute;
@@ -16,4 +16,12 @@
     width: 500px;
     height: 150px;
     position: absolute;
+    top: 580px
+}
+
+.bird {
+    background-color: yellow;
+    position: absolute;
+    width: 60px;
+    height: 45px;
 }
