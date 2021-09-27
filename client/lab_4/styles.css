@@ -4,64 +4,13 @@
     box-sizing: border-box;
   }
   .top-bar {
-    background-color: rgba(3, 112, 112, 0.4);
+    background-color: rgba(92, 241, 241, 0.651);
     border-radius: 4px;
     padding: 10px;
   }
 
-  .menu-container {
-    color: #fff;
-    background-color: #5995DA;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .menu {
-    border: 1px solid #fff;
-    width: 900px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .links {
-    border: 1px solid #fff;  
-    display: flex;
-    justify-content: flex-end;
-  }
-  
   .main-page {
     margin-left: 20px;
-  }
-
-  .database-demos {
-    margin-left: auto;
-  }
-
-  .header-container {
-    color: #5995DA;
-    background-color: #D6E9FE;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .header {
-    width: 900px;
-    height: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    align-self: center;
-  }
-
-  .group,
-  .github {
-    align-self: flex-end;
-    margin-bottom: 20px;
-    justify-content: space-between;
   }
 
   .photo-grid-container {
@@ -88,6 +37,7 @@
 
   .carousel .carousel_item_visible {
     display:block;
+    animation: fadeVisibility 0.5s;
   }
 
   .carousel .carousel_actions {
@@ -99,18 +49,12 @@
     transform: translateY(-50%);
   }
 
-  .carousel .carousel_actions button {
-    border-radius: 50px;
-    border: 0;
-    font-weight: bold;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
+  button:hover {
+    background-color: orangered;
+    border: 3px solid rgba(0, 139, 139, 0.8);
+    align-items: center;
   }
 
-  .carousel .carousel_actions button {
-  margin:0;
-  }
 
   .footer {
     display: flex;
@@ -120,7 +64,7 @@
   .footer-item {
     border: 1px solid #fff;
     background-color: #D6E9FE;
-    height: 200px;
+    height: 20px;
     flex: 1;
   }
 
@@ -129,4 +73,14 @@
   background-color: #5995DA;
   flex: initial;
   width: 300px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
 }
