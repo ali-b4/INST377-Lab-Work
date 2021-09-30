@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isGameOver) {
             createDoodler()
             createPlatforms()
+            
 
         }
     }
