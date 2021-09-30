@@ -14,10 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    class Platform {
+        constructor(newPlatBottom) {
+            this.bottom = newPlatBottom
+            this.left = Math.random() *315
+            this.visual = document.createElement('div')
+
+            const visual = this.visual
+            visual.classList.add('platform')
+            visual.style.left = this.left +'px'
+            visual.style.bottome = this.bottom +'px'
+            grid.appendChild(visual)
+        }
+    }
+
     function createPlatforms() {
         for (let i=0; i<platformCount; i++) {
             let platformSpace = 600/platformCount
             let newPlatBottom = 100 + i * platformSpace
+            let newPlatform = new Platform(newPlatBottom)
+            console.log(platforms)
         }
     }
 
@@ -25,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function start() {
         if (!isGameOver) {
             createDoodler()
+            createPlatforms()
 
         }
     }
