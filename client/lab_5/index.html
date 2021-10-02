@@ -3,15 +3,69 @@
   <head>
     <meta charset="utf-8">
     <script src="script.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="styles.css"></link>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Ali Baloch Lab 5</title>
   </head>
   <body>
-      <header class = 'lab5'>
-          <h1>Ali's Lab 5</h1>
-      </header>
-    <form action='' method='get' class='dining-form'>
-    </form>
+    <div class="wrapper">
+    <div class="container">
+        <div class= "box has-background-link has-text-white is-full">
+            Ali's Lab 5
+        </div>
+         <div class='column'>
+             <div class="columns is v-centered">
+                <div class="column is-8">
+                    <div class="box1">
+                    <div class="column has-background-white">
+                        <form action ="/api" method="GET" class ="speaker-form">
+                        <div class="field">
+                            <label class="label">First Name</label>
+                        <div class="control">
+                            <input type="text" class="input">
+                        </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label"> Food Preference</label>
+                        <div class="control">
+                                <input type="text" class="input">
+                        </div>
+                        </div>
+
+                        <div class ="field">
+                            <label class="label">Veggie or Vegan?</label>
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="question">
+                                    Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        No
+                                        </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button>submit</button>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </form>
+        <div class="column">
+            <div class="columns is=vcentered">
+                <p class="box has-background-white">    
+                    This is going to be something in two weeks.
+                </p>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+      
     
   </body>
 </html>
