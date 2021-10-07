@@ -123,4 +123,49 @@ document.addEventListener('DOMContentLoaded', () => {
     draw()
   }
 
+  function isAtRight() {
+    return current.some(index=> (currentPosition + index + 1) % width === 0)  
+  }
   
+  function isAtLeft() {
+    return current.some(index=> (currentPosition + index) % width === 0)
+  }
+
+  function checkRotatedPosition(P){
+    P = P || currentPosition       
+    if ((P+1) % width < 4) {            
+      if (isAtRight()){            
+        currentPosition += 1    
+        checkRotatedPosition(P) 
+        }
+    }
+    else if (P % width > 5) {
+      if (isAtLeft()){
+        currentPosition -= 1
+      checkRotatedPosition(P)
+      }
+    }
+  }
+  
+  function rotate() {
+    undraw()
+    currentRotation ++
+    if(currentRotation === current.length) { 
+      currentRotation = 0
+    }
+    current = theTetrominoes[random][currentRotation]
+    checkRotatedPosition()
+    draw()
+  }
+
+  startBtn.addEventListener('click', () => {
+    if (timerId) {
+      clearInterval(timerId)
+      timerId = null
+    } else {
+      draw()
+      timerId = setInterval(moveDown, 1000)
+      nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+      displayShape()
+    }
+  })
