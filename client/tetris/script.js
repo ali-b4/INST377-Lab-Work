@@ -88,4 +88,39 @@ document.addEventListener('DOMContentLoaded', () => {
     freeze()
   }
 
+  function freeze() {
+    if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
+      current.forEach(index => squares[currentPosition + index].classList.add('taken'))
+      //start a new tetromino falling
+      random = nextRandom
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length)
+      current = theTetrominoes[random][currentRotation]
+      currentPosition = 4
+      draw()
+      displayShape()
+      addScore()
+      gameOver()
+    }
+  }
+
+  function moveLeft() {
+    undraw()
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+    if(!isAtLeftEdge) currentPosition -=1
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition +=1
+    }
+    draw()
+  }
+
+  function moveRight() {
+    undraw()
+    const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
+    if(!isAtRightEdge) currentPosition +=1
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition -=1
+    }
+    draw()
+  }
+
   
