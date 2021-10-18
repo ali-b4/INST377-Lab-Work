@@ -21,7 +21,6 @@ async function mainThread() {
 
   console.log('external dataset', data);
 
-
   document.addEventListener('input', (event) => {
     console.log(event.target.value);
     const filteredList = data.filter((item, index) => {
