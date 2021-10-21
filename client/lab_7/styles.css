@@ -1,0 +1,8 @@
+.resto-name {
+    font-weight: bold;
+    display: block;
+    background:burlywood;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+}
