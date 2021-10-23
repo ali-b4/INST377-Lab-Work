@@ -9,7 +9,7 @@ async function fetchRequest(url) {
   }
 }
 
-function filterFunction(event) {
+function filterFunction(event, data) {
   console.log(event.target.value);
   const filteredList = data.filter((item, index) => {
     const zipcode = event.target.value;
@@ -20,9 +20,9 @@ function filterFunction(event) {
   const limitedList = filteredList.slice(0,5);
 
   limitedList.forEach((item, index) => {
-    listOfFilteredItems.innerHTML += `<span class="resto-name">${item.name}</span> <br>`;
+    list.innerHTML += `<span class="resto-name">${item.name}</span> <br>`;
   });
-};
+}
 
 async function mainThread() {
   console.log('loaded main script');
@@ -47,22 +47,8 @@ async function mainThread() {
 
   console.log('external dataset', data);
 
-  document.addEventListener('input', (event) => {
-    console.log(event.target.value);
-    const filteredList = data.filter((item, index) => {
-      const zipcode = event.target.value;
-      return item.zip === zipcode;
-    });
-    console.table(filteredList);
-
-    const limitedList = filteredList.slice(0,5);
-
-    limitedList.forEach((item, index) => {
-      listOfFilteredItems.innerHTML += `<span class="resto-name">${item.name}</span> <br>`;
-    });
-  });
+  document.addEventListener('input', (event) => { filterFunction(event, data, listOfFilteredItems); });
 }
-
 window.onload = mainThread;
 
 /* const mymap = L.map('mapid').setView([51.505, -0.09], 13);
