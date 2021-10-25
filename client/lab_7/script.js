@@ -24,9 +24,10 @@ function filterFunction(event, data, list, mymap) {
     const point = item.geocoded_column_1;
     const latLong = point.coordinates;
     const marker = latLong.reverse();
-    list.innerHTML += `<span class="resto-name">${item.name}</span> <br>`;
+
+    list.innerHTML += `<span class="resto-name">${item.name}</span><br>`;
     console.log(marker);
-    L.marker([marker]).addTo(mymap);
+    L.marker(marker).addTo(mymap);
   });
 }
 
