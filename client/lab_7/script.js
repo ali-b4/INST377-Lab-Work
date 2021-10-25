@@ -9,7 +9,7 @@ async function fetchRequest(url) {
   }
 }
 
-function filterFunction(event, data) {
+function filterFunction(event, data, list, mymap) {
   console.log(event.target.value);
   const filteredList = data.filter((item, index) => {
     const zipcode = event.target.value;
@@ -21,6 +21,8 @@ function filterFunction(event, data) {
 
   limitedList.forEach((item, index) => {
     list.innerHTML += `<span class="resto-name">${item.name}</span> <br>`;
+    console.log(item.geocoded_column_1.coordinates);
+    L.marker([item.geocoded_column_1]).addTo(mymap);
   });
 }
 
